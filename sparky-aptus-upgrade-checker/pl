@@ -1,0 +1,10 @@
+# Polish localization file for Sparky APTus Upgrade Checker
+# Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
+# Under the GNU GPL v2
+# Last update by pavroo 2017/06/18
+
+LOCAL1="Aktualizacje są dostępne"
+LOCAL2="Uruchomić aktualizator systemu?"
+LOCAL3="Tak"
+LOCAL4="Nie"
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=APTus Upgrade Checker
+Comment=SparkyLinux Updater
+Exec=sudo /usr/bin/sparky-aptus-upgrade-checker
+Terminal=false
+Type=Application
+

@@ -1,0 +1,10 @@
+# English localization file for Sparky APTus Upgrade Checker
+# File di traduzione italiana per Sparky Upgrade Checker
+# Copyright Carlo "malato" Troiani <abbasolafrangetta@gmail.com> 2017/09/02
+# Rilasciato sotto licenza GNU GPL v2
+
+LOCAL1="Ci sono nuovi aggiornamenti"
+LOCAL2="Vuoi eseguire l'aggiornamento del sistema?"
+LOCAL3="Si'"
+LOCAL4="No"
+

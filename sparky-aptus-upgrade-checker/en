@@ -1,0 +1,10 @@
+# English localization file for Sparky APTus Upgrade Checker
+# Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
+# Under the GNU GPL v2
+# Last update by pavroo 2017/06/18
+
+LOCAL1="Updates are available"
+LOCAL2="Run System Upgrade tool?"
+LOCAL3="Yes"
+LOCAL4="No"
+
