@@ -4,13 +4,15 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017 under the GNU GPL2 License
-# Last update 2017/10/08
+# Last update 2017/11/05
 
 sleep 30
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-aptus-upgrade-checker"
-if [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
+if [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
+. $DEFLOCDIR/es
+elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
 . $DEFLOCDIR/fr
 elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
 . $DEFLOCDIR/it
@@ -41,7 +43,7 @@ if [ "$PINGTEST" = "" ]; then
 	exit 1
 fi
 
-# do not run it if sparky first run is installed
+# do not run it if sparky-firstrun is installed
 if [ -f /usr/bin/sparky-firstrun ]; then
 	exit 1
 fi

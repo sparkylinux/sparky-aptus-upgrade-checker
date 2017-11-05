@@ -2,9 +2,7 @@
 # Copyright 2016 hiver <hiver@club-internet.fr> 2016/06/05
 # Sous licence GNU GPL v2
 # Dernière mise à jour 2017/10/06
-
 LOCAL1="Des mises à jour sont disponibles"
 LOCAL2="Voulez-vous lancer l'outil de mise à jour?"
 LOCAL3="Oui"
 LOCAL4="Non"
-

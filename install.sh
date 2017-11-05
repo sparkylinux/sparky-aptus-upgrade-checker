@@ -26,5 +26,5 @@ else
 	if [ ! -d /usr/share/sparky/sparky-aptus-upgrade-checker ]; then
 		mkdir -p d /usr/share/sparky/sparky-aptus-upgrade-checker
 	fi
-	cp sparky-aptus-upgrade-checker/* /usr/share/sparky/sparky-aptus-upgrade-checker/
+	cp lang/* /usr/share/sparky/sparky-aptus-upgrade-checker/
 fi
