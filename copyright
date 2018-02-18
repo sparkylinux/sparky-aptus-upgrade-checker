@@ -2,7 +2,7 @@ Upstream Author(s):
     Paweł "pavroo" Pijanowski <pavroo@onet.eu>
     
 Files: *
-    Copyright (C) 2017 Paweł Pijanowski
+    Copyright (C) 2017-2018 Paweł Pijanowski
     License: GPL-2
 
 File: es
@@ -15,6 +15,10 @@ File: fr
 
 File: it
     Copyright 2017 Carlo "malato" Troiani <abbasolafrangetta@gmail.com>
+    License: GPL-2
+
+File: pt_BR
+    Copyright 2018 Elton Fabrício Ferreira "eltonfabricio10" <eltonfabricio10@gmail.com>
     License: GPL-2
 
 License:

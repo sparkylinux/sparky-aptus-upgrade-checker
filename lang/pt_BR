@@ -1,0 +1,8 @@
+# Arquivo de localização para o Português do Brasil do aplicativo Sparky APTus Upgrade Checker.
+# Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
+# Sob a licença GNU GPL v2
+# Traduzido por Elton Fabrício Ferreira "eltonfabricio10" <eltonfabricio10@gmail.com> 2018/02/17
+LOCAL1="Novas atualizações estão disponíveis"
+LOCAL2="Deseja executar a Ferramenta de Atualização do Sistema?"
+LOCAL3="Sim"
+LOCAL4="Não"
