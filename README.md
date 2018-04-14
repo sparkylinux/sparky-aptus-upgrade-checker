@@ -25,7 +25,6 @@ iputils-ping
 sed
 sparky-aptus-upgrade
 sparky-remsu
-sparky-xterm
 sudo
 yad
 

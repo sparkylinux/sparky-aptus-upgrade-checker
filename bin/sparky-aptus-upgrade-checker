@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2018 under the GNU GPL2 License
-# Last update 2018/02/18
+# Last update 2018/04/14
 
 sleep 30
 
@@ -20,6 +20,8 @@ elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
 . $DEFLOCDIR/pl
 elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
 . $DEFLOCDIR/pt_BR
+elif [ "`cat /etc/default/locale | grep pt_PT`" != "" ]; then
+. $DEFLOCDIR/pt_PT
 else
 . $DEFLOCDIR/en
 fi
