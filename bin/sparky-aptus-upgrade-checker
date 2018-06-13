@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2018 under the GNU GPL2 License
-# Last update 2018/04/14
+# Last update 2018/06/13
 
 sleep 30
 
@@ -42,10 +42,17 @@ if [ "$TESTMODE" != "" ]; then
 	exit 1
 fi
 
-# do not run it with no internet connection
-PINGTEST=$(ping -c 1 debian.org | grep [0-9])
-if [ "$PINGTEST" = "" ]; then
-	exit 1
+# check out connection to debian server
+PINGTEST0=$(ping -c 1 debian.org | grep [0-9])
+if [ "$PINGTEST0" = "" ]; then
+    $DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL3"
+    exit 1
+fi
+# check out connection to sparky server
+PINGTEST1=$(ping -c 1 sparkylinux.org | grep [0-9])
+if [ "$PINGTEST1" = "" ]; then
+    $DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL3"
+    exit 1
 fi
 
 # do not run it if sparky-firstrun is installed
