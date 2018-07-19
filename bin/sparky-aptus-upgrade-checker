@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2018 under the GNU GPL2 License
-# Last update 2018/06/13
+# Last update 2018/07/19
 
 sleep 30
 
@@ -14,6 +14,8 @@ if [ "`cat /etc/default/locale | grep es_AR`" != "" ]; then
 . $DEFLOCDIR/es
 elif [ "`cat /etc/default/locale | grep fr_FR`" != "" ]; then
 . $DEFLOCDIR/fr
+elif [ "`cat /etc/default/locale | grep id_ID`" != "" ]; then
+. $DEFLOCDIR/id_ID
 elif [ "`cat /etc/default/locale | grep it_IT`" != "" ]; then
 . $DEFLOCDIR/it
 elif [ "`cat /etc/default/locale | grep pl_PL`" != "" ]; then
@@ -45,13 +47,13 @@ fi
 # check out connection to debian server
 PINGTEST0=$(ping -c 1 debian.org | grep [0-9])
 if [ "$PINGTEST0" = "" ]; then
-    $DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL3"
+    #$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL3"
     exit 1
 fi
 # check out connection to sparky server
 PINGTEST1=$(ping -c 1 sparkylinux.org | grep [0-9])
 if [ "$PINGTEST1" = "" ]; then
-    $DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL3"
+    #$DIALOG $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL3"
     exit 1
 fi
 
