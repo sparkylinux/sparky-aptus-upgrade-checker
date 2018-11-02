@@ -2,7 +2,24 @@
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
 # Under the GNU GPL v2
 # Translation by José Vieira <jvieira33@sapo.pt> 2018/04/13
+# Last update by pavroo 2018/10/30
+LOCAL0="Remove"
 LOCAL1="Há actualizações disponíveis"
 LOCAL2="Actualizar o Sistema?"
 LOCAL3="Sim"
 LOCAL4="Não"
+LOCAL5="Exit"
+LOCAL6="System Upgrade Scheduler"
+LOCAL7="Choose when should I check updates"
+LOCAL8="Every (in hours):"
+LOCAL9="Something went wrong! No new Sparky update cron found!"
+LOCAL10="Exiting..."
+LOCAL11="Done! The tool will be checked updates every"
+LOCAL12="hours."
+LOCAL14="Would you like to remove System Upgrade Scheduler, if exist?"
+LOCAL15="Something went wrong! The upgrade cron still exist!"
+LOCAL16="Done! The upgrade cron has been removed!"
+LOCAL17="Would you like to add new System Upgrade Scheduler?"
+### .desktop file to be translated too
+# Name[pt_PT]=System Upgrade Scheduler
+# Comment[pt_PT]=System upgrade scheduler

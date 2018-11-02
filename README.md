@@ -24,7 +24,7 @@ grep
 iputils-ping
 sed
 sparky-aptus-upgrade
-sparky-remsu
+sparky-remsu (>= 0.2.8)
 sudo
 yad
 

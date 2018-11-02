@@ -6,8 +6,6 @@
 # Copyright 2017-2018 under the GNU GPL2 License
 # Last update 2018/08/02
 
-sleep 30
-
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-aptus-upgrade-checker"
 if [ "`cat /etc/default/locale | grep es`" != "" ]; then
@@ -30,41 +28,43 @@ else
 . $DEFLOCDIR/en
 fi
 
-DIALOG="yad --posx=-10 --posy=-80 --undecorated --skip-taskbar --borders=5 --image=system-software-update --on-top"
-TEXT="--text="
-OKEXIT=" --button=$LOCAL3:0 --button=$LOCAL4:1 "
+# must be root
+testroot="`whoami`"
+if [ "$testroot" != "root" ]; then
+	/usr/bin/remsu $0 &
+fi
 
-# do not run it on live system
-TESTMODE=`grep "live" /etc/passwd`
-if [ "$TESTMODE" != "" ]; then
+# check out connection to debian server
+PINGTEST0=$(ping -c 1 debian.org | grep [0-9])
+if [ -f /tmp/sparky-ping ]; then
+	rm -f /tmp/sparky-ping
+fi
+if [ "$PINGTEST0" = "" ]; then
+	echo "failed" >> /tmp/sparky-ping
 	exit 1
+else
+	echo "ok" >> /tmp/sparky-ping
 fi
+# check out connection to sparky server
+#PINGTEST1=$(ping -c 1 sparkylinux.org | grep [0-9])
+#if [ "$PINGTEST1" = "" ]; then
+#	exit 1
+#fi
 
-# do not run it if sparky-firstrun is installed
-if [ -f /usr/bin/sparky-firstrun ]; then
-	exit 1
+# preper working dir
+if [ -d /tmp/aptus-update ]; then
+	rm -rf /tmp/aptus-update
 fi
+mkdir -p /tmp/aptus-update
 
-sudo /usr/bin/sparky-aptus-upgrade-sim
-
-# check out connection
-CHECKPING=`cat /tmp/sparky-ping | grep failde`
-if [ "$CHECKPING" != "" ]; then
-	exit 1
-fi
-
-UPGRADE1=$(cat /tmp/aptus-update/checkout | tail -n2 | grep [kM]B)
-
-# display a message
-if [ "$UPGRADE1" != "" ]; then
-	$DIALOG $TEXT"\n\n$LOCAL1\n\n$LOCAL2" $OKEXIT
-
-	# run sparky-aptus-upgrade tool
-	if [ "$?" = "0" ]; then
-		remsu /usr/bin/sparky-aptus-upgrade
-	else
-		exit 0
-	fi
-fi
+# do the job
+apt-get update
+apt-get -u dist-upgrade --assume-no >> /tmp/aptus-update/checkout
+sed -i 1d /tmp/aptus-update/checkout
+sed -i 1d /tmp/aptus-update/checkout
+sed -i 1d /tmp/aptus-update/checkout
+sed -i 1d /tmp/aptus-update/checkout
+sed -i '$ d' /tmp/aptus-update/checkout
+sed -i '$ d' /tmp/aptus-update/checkout
 
 exit 0
