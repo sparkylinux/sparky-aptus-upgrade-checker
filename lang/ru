@@ -2,7 +2,7 @@
 # Copyright 2018 Igor Klyushnyov <inklu@yandex.ru> 2018/07/30
 # Под лицензией GNU GPL v2
 # Последнее обновление 2018/07/30
-# Last update by pavroo 2018/10/30
+# Last update by pavroo 2018/11/03
 LOCAL0="Remove"
 LOCAL1="Доступны обновления"
 LOCAL2="Запустить инструмент системного обновления?"
@@ -15,11 +15,13 @@ LOCAL8="Every (in hours):"
 LOCAL9="Something went wrong! No new Sparky update cron found!"
 LOCAL10="Exiting..."
 LOCAL11="Done! The tool will be checked updates every"
-LOCAL12="hours."
+LOCAL12="hours"
 LOCAL14="Would you like to remove System Upgrade Scheduler, if exist?"
 LOCAL15="Something went wrong! The upgrade cron still exist!"
 LOCAL16="Done! The upgrade cron has been removed!"
 LOCAL17="Would you like to add new System Upgrade Scheduler?"
+LOCAL18="hour"
+LOCAL19="hours"
 ### .desktop file to be translated too
 # Name[ru]=System Upgrade Scheduler
 # Comment[ru]=System upgrade scheduler

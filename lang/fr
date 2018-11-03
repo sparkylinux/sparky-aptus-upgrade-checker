@@ -2,7 +2,7 @@
 # Copyright 2016 hiver <hiver@club-internet.fr> 2016/06/05
 # Sous licence GNU GPL v2
 # Dernière mise à jour 2017/10/06
-# Last update by pavroo 2018/10/30
+# Last update by pavroo 2018/11/03
 LOCAL0="Remove"
 LOCAL1="Des mises à jour sont disponibles"
 LOCAL2="Voulez-vous lancer l'outil de mise à jour?"
@@ -15,11 +15,13 @@ LOCAL8="Every (in hours):"
 LOCAL9="Something went wrong! No new Sparky update cron found!"
 LOCAL10="Exiting..."
 LOCAL11="Done! The tool will be checked updates every"
-LOCAL12="hours."
+LOCAL12="hours"
 LOCAL14="Would you like to remove System Upgrade Scheduler, if exist?"
 LOCAL15="Something went wrong! The upgrade cron still exist!"
 LOCAL16="Done! The upgrade cron has been removed!"
 LOCAL17="Would you like to add new System Upgrade Scheduler?"
+LOCAL18="hour"
+LOCAL19="hours"
 ### .desktop file to be translated too
 # Name[fr]=System Upgrade Scheduler
 # Comment[fr]=System upgrade scheduler

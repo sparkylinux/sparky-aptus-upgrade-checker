@@ -2,7 +2,7 @@
 # File di traduzione italiana per Sparky Upgrade Checker
 # Copyright Carlo "malato" Troiani <abbasolafrangetta@gmail.com> 2017/09/02
 # Rilasciato sotto licenza GNU GPL v2
-# Last update by pavroo 2018/10/30
+# Last update by pavroo 2018/11/03
 LOCAL0="Remove"
 LOCAL1="Ci sono nuovi aggiornamenti"
 LOCAL2="Vuoi eseguire l'aggiornamento del sistema?"
@@ -15,11 +15,13 @@ LOCAL8="Every (in hours):"
 LOCAL9="Something went wrong! No new Sparky update cron found!"
 LOCAL10="Exiting..."
 LOCAL11="Done! The tool will be checked updates every"
-LOCAL12="hours."
+LOCAL12="hours"
 LOCAL14="Would you like to remove System Upgrade Scheduler, if exist?"
 LOCAL15="Something went wrong! The upgrade cron still exist!"
 LOCAL16="Done! The upgrade cron has been removed!"
 LOCAL17="Would you like to add new System Upgrade Scheduler?"
+LOCAL18="hour"
+LOCAL19="hours"
 ### .desktop file to be translated too
 # Name[it]=System Upgrade Scheduler
 # Comment[it]=System upgrade scheduler
