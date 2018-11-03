@@ -20,11 +20,13 @@ Dependencies:
 -------------
 apt
 coreutils
+cron
 grep
 iputils-ping
+ktsuss | menu
 sed
 sparky-aptus-upgrade
-sparky-remsu (>= 0.2.8)
+sparky-remsu (>= 0.2.10)
 sudo
 yad
 

@@ -16,12 +16,13 @@
 
 if [ "$1" = "uninstall" ]; then
    	rm -f /usr/bin/sparky-aptus-upgrade-checker
-	#rm -f /usr/bin/sparky-aptus-upgrade-cron
+	rm -f /usr/bin/sparky-aptus-upgrade-cron
+	rm -f /usr/bin/sparky-aptus-upgrade-sim
 	rm -f /etc/sudoers.d/sparkyupdate
 	rm -f /etc/sudoers.d/sparkyupdatecron
 	rm -f /etc/xdg/autostart/sparky-aptus-update.desktop
 	rm -rf /usr/share/sparky/sparky-aptus-upgrade-checker
-	#rm -f /usr/share/applications/sparky-aptus-upgrade-cron
+	rm -f /usr/share/applications/sparky-aptus-upgrade-cron
 else
 	cp bin/* /usr/bin/
 	cp etc/sparkyupdate /etc/sudoers.d/
@@ -31,5 +32,5 @@ else
 		mkdir -p d /usr/share/sparky/sparky-aptus-upgrade-checker
 	fi
 	cp lang/* /usr/share/sparky/sparky-aptus-upgrade-checker/
-	#cp share/* /usr/share/applications/
+	cp share/* /usr/share/applications/
 fi

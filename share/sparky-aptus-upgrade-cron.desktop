@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=System Upgrade Scheduler
+GenericName=System Upgrade Scheduler
+Name[pl]=Harmonogram Aktualizacji Systemu
+Comment=System upgrade scheduler
+Comment[pl]=Harmonogram aktualizacji systemu
+Exec=/usr/bin/sparky-aptus-upgrade-cron
+Icon=appointment
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Applications;System
+

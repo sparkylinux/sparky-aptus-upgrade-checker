@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2018 under the GNU GPL2 License
-# Last update 2018/08/02
+# Last update 2018/08/03
 
 sleep 30
 
@@ -48,20 +48,30 @@ fi
 sudo /usr/bin/sparky-aptus-upgrade-sim
 
 # check out connection
-CHECKPING=`cat /tmp/sparky-ping | grep failde`
+CHECKPING=`cat /tmp/sparky-ping | grep failed`
 if [ "$CHECKPING" != "" ]; then
 	exit 1
 fi
 
 UPGRADE1=$(cat /tmp/aptus-update/checkout | tail -n2 | grep [kM]B)
 
+KTSUSS=`which ktsuss`
+SUTOROOT=`which su-to-root`
+if [ "$KTSUSS" != "" ]; then
+	ROOTEXEC="ktsuss"
+elif [ "$SUTOROOT" != "" ]; then
+	ROOTEXEC="su-to-root -X -c"
+else
+	echo "no ktsuss nor su-to-root commands found... exiting.."
+fi
 # display a message
 if [ "$UPGRADE1" != "" ]; then
 	$DIALOG $TEXT"\n\n$LOCAL1\n\n$LOCAL2" $OKEXIT
 
 	# run sparky-aptus-upgrade tool
 	if [ "$?" = "0" ]; then
-		remsu /usr/bin/sparky-aptus-upgrade
+		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+		$ROOTEXEC /usr/bin/sparky-aptus-upgrade
 	else
 		exit 0
 	fi
