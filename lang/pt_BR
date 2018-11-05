@@ -2,26 +2,26 @@
 # Copyright 2015 Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
 # Sob a licença GNU GPL v2
 # Traduzido por Elton Fabrício Ferreira "eltonfabricio10" <eltonfabricio10@gmail.com> 2018/02/17
-# Last update by pavroo 2018/11/03
-LOCAL0="Remove"
+# Last update by pavroo 2018/11/05
+LOCAL0="Remover"
 LOCAL1="Novas atualizações estão disponíveis"
 LOCAL2="Deseja executar a Ferramenta de Atualização do Sistema?"
 LOCAL3="Sim"
 LOCAL4="Não"
-LOCAL5="Exit"
-LOCAL6="System Upgrade Scheduler"
-LOCAL7="Choose when should I check updates"
-LOCAL8="Every (in hours):"
-LOCAL9="Something went wrong! No new Sparky update cron found!"
-LOCAL10="Exiting..."
-LOCAL11="Done! The tool will be checked updates every"
-LOCAL12="hours"
-LOCAL14="Would you like to remove System Upgrade Scheduler, if exist?"
-LOCAL15="Something went wrong! The upgrade cron still exist!"
-LOCAL16="Done! The upgrade cron has been removed!"
-LOCAL17="Would you like to add new System Upgrade Scheduler?"
-LOCAL18="hour"
-LOCAL19="hours"
+LOCAL5="Sair"
+LOCAL6="Agendador de Atualização do Sistema"
+LOCAL7="Escolher quando devo verificar as atualizações"
+LOCAL8="Cada (em horas):"
+LOCAL9="Algo deu errado! Nenhum novo agendamento de atualização do Sparky encontrado!"
+LOCAL10="Saindo..."
+LOCAL11="Feito! A ferramenta verificará atualizações a cada"
+LOCAL12="horas"
+LOCAL14="Você gostaria de remover o Agendador de Atualização do Sistema, se existir?"
+LOCAL15="Algo deu errado! O agendamento de atualização ainda existe!"
+LOCAL16="Feito! O agendamento de atualização foi removido!"
+LOCAL17="Você gostaria de adicionar novo Agendador de Atualização do Sistema?"
+LOCAL18="hora"
+LOCAL19="horas"
 ### .desktop file to be translated too
-# Name[pt_BR]=System Upgrade Scheduler
-# Comment[pt_BR]=System upgrade scheduler
+# Name[pt_BR]=Agendador de Atualização do Sistema
+# Comment[pt_BR]=Agendador de atualização do sistema
