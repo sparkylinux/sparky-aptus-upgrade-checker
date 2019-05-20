@@ -5,8 +5,8 @@
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2018 under the GNU GPL2 License
 # Last update 2018/08/03
-
-sleep 30
+	
+#sleep 30
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-aptus-upgrade-checker"
@@ -45,6 +45,10 @@ if [ -f /usr/bin/sparky-firstrun ]; then
 	exit 1
 fi
 
+if [ -s /tmp/aptus-update/checkout ]; then
+	exit 1
+fi
+
 sudo /usr/bin/sparky-aptus-upgrade-sim
 
 # check out connection
@@ -67,14 +71,15 @@ fi
 # display a message
 if [ "$UPGRADE1" != "" ]; then
 	$DIALOG $TEXT"\n\n$LOCAL1\n\n$LOCAL2" $OKEXIT
-
 	# run sparky-aptus-upgrade tool
 	if [ "$?" = "0" ]; then
+		sudo /usr/bin/sparky-aptus-upgrade-sim clean
 		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 		$ROOTEXEC /usr/bin/sparky-aptus-upgrade
 	else
+		sudo /usr/bin/sparky-aptus-upgrade-sim clean
 		exit 0
-	fi
+	fi								
 fi
 
 exit 0

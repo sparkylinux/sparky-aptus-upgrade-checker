@@ -4,7 +4,12 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2018 under the GNU GPL2 License
-# Last update 2018/08/03
+# Last update 2018/08/03	
+
+if [ "$1" = "clean" ]; then
+	rm -rf /tmp/aptus-update/checkout 
+	exit 0	
+fi		
 
 # check out connection to debian server
 PINGTEST0=$(ping -c 1 debian.org | grep [0-9])
@@ -27,10 +32,12 @@ fi
 if [ -d /tmp/aptus-update ]; then
 	rm -rf /tmp/aptus-update
 fi
+
 mkdir -p /tmp/aptus-update
 
 # do the job
 apt-get update
+apt-get autoremove -y
 apt-get -u dist-upgrade --assume-no >> /tmp/aptus-update/checkout
 sed -i 1d /tmp/aptus-update/checkout
 sed -i 1d /tmp/aptus-update/checkout
