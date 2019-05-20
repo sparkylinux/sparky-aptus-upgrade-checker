@@ -1,7 +1,7 @@
 # Polish localization file for Sparky APTus Upgrade Checker
 # Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
 # Under the GNU GPL v2
-# Last update by pavroo 2018/11/03
+# Last update by pavroo 2018/11/10
 LOCAL0="Usuń"
 LOCAL1="Aktualizacje są dostępne"
 LOCAL2="Uruchomić aktualizator systemu?"
@@ -18,7 +18,7 @@ LOCAL12="godzin"
 LOCAL14="Czy chcesz usunąć Harmonogram Aktualizacji Systemu, jeśli istnieje?"
 LOCAL15="Coś poszło źle! Cron aktualizacji wciąż istnieje!"
 LOCAL16="Zrobione! Cron aktualizacji został usunięty!"
-LOCAL17="Would you like to add new System Upgrade Scheduler?"
+LOCAL17="Czy chcesz dodać nowy Harmonogram Aktualizacji Systemu?"
 LOCAL18="godzinę"
 LOCAL19="godziny"
 ### .desktop file to be translated too

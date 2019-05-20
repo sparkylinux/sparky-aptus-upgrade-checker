@@ -4,46 +4,48 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2018 under the GNU GPL2 License
-# Last update 2018/08/03	
+# Last update 2019/05/20
+
+if [ "$1" = "simulate" ]; then
+	# check out connection to debian server
+	PINGTEST0=$(ping -c 1 debian.org | grep [0-9])
+	if [ -f /tmp/sparky-ping ]; then
+		rm -f /tmp/sparky-ping
+	fi
+	if [ "$PINGTEST0" = "" ]; then
+		echo "failed" >> /tmp/sparky-ping
+		exit 1	
+	else
+		echo "ok" >> /tmp/sparky-ping
+	fi
+	# check out connection to sparky server
+	#PINGTEST1=$(ping -c 1 sparkylinux.org | grep [0-9])
+	#if [ "$PINGTEST1" = "" ]; then
+	#	exit 1
+	#fi
+
+	# preper working dir
+	if [ -d /tmp/aptus-update ]; then
+		rm -rf /tmp/aptus-update
+	fi
+	mkdir -p /tmp/aptus-update
+
+	# do the job
+	apt-get update
+	apt-get -u dist-upgrade --assume-no >> /tmp/aptus-update/checkout
+	sed -i 1d /tmp/aptus-update/checkout
+	sed -i 1d /tmp/aptus-update/checkout
+	sed -i 1d /tmp/aptus-update/checkout
+	sed -i 1d /tmp/aptus-update/checkout
+	sed -i '$ d' /tmp/aptus-update/checkout
+	sed -i '$ d' /tmp/aptus-update/checkout
+fi
 
 if [ "$1" = "clean" ]; then
-	rm -rf /tmp/aptus-update/checkout 
-	exit 0	
-fi		
+	if [ -d /tmp/aptus-update ]; then
+		rm -rf /tmp/aptus-update
+	fi
 
-# check out connection to debian server
-PINGTEST0=$(ping -c 1 debian.org | grep [0-9])
-if [ -f /tmp/sparky-ping ]; then
-	rm -f /tmp/sparky-ping
 fi
-if [ "$PINGTEST0" = "" ]; then
-	echo "failed" >> /tmp/sparky-ping
-	exit 1
-else
-	echo "ok" >> /tmp/sparky-ping
-fi
-# check out connection to sparky server
-#PINGTEST1=$(ping -c 1 sparkylinux.org | grep [0-9])
-#if [ "$PINGTEST1" = "" ]; then
-#	exit 1
-#fi
-
-# preper working dir
-if [ -d /tmp/aptus-update ]; then
-	rm -rf /tmp/aptus-update
-fi
-
-mkdir -p /tmp/aptus-update
-
-# do the job
-apt-get update
-apt-get autoremove -y
-apt-get -u dist-upgrade --assume-no >> /tmp/aptus-update/checkout
-sed -i 1d /tmp/aptus-update/checkout
-sed -i 1d /tmp/aptus-update/checkout
-sed -i 1d /tmp/aptus-update/checkout
-sed -i 1d /tmp/aptus-update/checkout
-sed -i '$ d' /tmp/aptus-update/checkout
-sed -i '$ d' /tmp/aptus-update/checkout
 
 exit 0
