@@ -63,6 +63,7 @@ elif [ "$SUTOROOT" != "" ]; then
 	ROOTEXEC="su-to-root -X -c"
 else
 	echo "no ktsuss nor su-to-root commands found... exiting.."
+	exit 1
 fi
 # display a message
 if [ "$UPGRADE1" != "" ]; then

@@ -4,7 +4,7 @@
 # every 1, 2, 4, 8 or 12 hours 
 # Created by Paweł "pavroo" Pijanowski 2018/10/29
 # Copyright 2018 under the GNU GPL3 License
-# Last update 2018/11/03
+# Last update 2019/09/03
 
 # get default's locale file
 DEFLOCDIR="/usr/share/sparky/sparky-aptus-upgrade-checker"
@@ -28,8 +28,8 @@ else
 . $DEFLOCDIR/en
 fi
 
-DIALOG="yad --width 450 --height=330 -center"
-DIALOG4="yad --width 450"
+DIALOG="yad --width 450 --height=380 --center"
+DIALOG4="yad --width 450 --center"
 TITLE="--always-print-result --dialog-sep --window-icon=appointment --image=appointment --title="
 TITLETEXT="$LOCAL6"
 MENU="--list --column=Info --column=Info2"
@@ -47,7 +47,10 @@ Exit "$LOCAL5" \
 4h "4 $LOCAL19" \
 8h "8 $LOCAL12" \
 12h "12 $LOCAL12" \
-DEL "$LOCAL0"`
+24h "$LOCAL20" \
+7d "$LOCAL21" \
+DEL "$LOCAL0" \
+UP "$LOCAL26"`
 
 if [ "$?" = "0" ]; then
 	CHOICE=`echo $CHOICES | cut -d "|" -f 1`
@@ -56,28 +59,38 @@ else
 fi
 
 if [ "$CHOICE" = "1h" ]; then
-	OUTPUT="1"
+	HOURS="1"
 	addmenu
 
 elif [ "$CHOICE" = "2h" ]; then
-	OUTPUT="2"
+	HOURS="2"
 	addmenu
 
 elif [ "$CHOICE" = "4h" ]; then
-	OUTPUT="4"
+	HOURS="4"
 	addmenu
 
 elif [ "$CHOICE" = "8h" ]; then
-	OUTPUT="8"
+	HOURS="8"
 	addmenu
 
 elif [ "$CHOICE" = "12h" ]; then
-	OUTPUT="12"
+	HOURS="12"
+	addmenu
+
+elif [ "$CHOICE" = "24h" ]; then
+	DAY="10"
+	addmenu
+
+elif [ "$CHOICE" = "7d" ]; then
+	WEEK="10"
 	addmenu
 
 elif [ "$CHOICE" = "DEL" ]; then
 	remmenu
 
+elif [ "$CHOICE" = "UP" ]; then
+	upmenu
 else
 	exit 1
 fi
@@ -100,8 +113,18 @@ if [ -f /etc/cron.d/sparky-upgrade ]; then
 	rm -f /etc/cron.d/sparky-upgrade
 fi
 
-echo "# Sparky Upgrade Scheduler" >> /etc/cron.d/sparky-upgrade
-echo "0 */$OUTPUT * * * $WHOI DISPLAY=:0 /usr/bin/sparky-aptus-upgrade-checker" >> /etc/cron.d/sparky-upgrade
+if [ "$HOURS" != "" ]; then
+	echo "# Sparky Upgrade Scheduler" >> /etc/cron.d/sparky-upgrade
+	echo "0 */$HOURS * * * $WHOI DISPLAY=:0 /usr/bin/sparky-aptus-upgrade-checker" >> /etc/cron.d/sparky-upgrade
+
+elif [ "$DAY" != "" ]; then
+	echo "# Sparky Upgrade Scheduler" >> /etc/cron.d/sparky-upgrade
+	echo "0 $DAY * * * $WHOI DISPLAY=:0 /usr/bin/sparky-aptus-upgrade-checker" >> /etc/cron.d/sparky-upgrade
+
+elif [ "$WEEK" != "" ]; then
+	echo "# Sparky Upgrade Scheduler" >> /etc/cron.d/sparky-upgrade
+	echo "0 $WEEK * * 1 $WHOI DISPLAY=:0 /usr/bin/sparky-aptus-upgrade-checker" >> /etc/cron.d/sparky-upgrade
+fi
 /etc/init.d/cron restart
 exit 0
 FOO
@@ -110,13 +133,18 @@ FOO
 	remsu /tmp/sparky-cron
 	rm -f /tmp/sparky-cron
 
-	CHECKNEWCRON=`cat /etc/cron.d/sparky-upgrade | grep "$OUTPUT"`
-	if [ "$CHECKNEWCRON" = "" ]; then
+	if [ "$HOURS" != "" ]; then
+		$DIALOG4 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL11 $HOURS $LOCAL12\n\n$LOCAL10"
+		exit 0
+	elif [ "$DAY" != "" ]; then
+		$DIALOG4 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL11 $LOCAL22 $LOCAL24\n\n$LOCAL10"
+		exit 0
+	elif [ "$WEEK" != "" ]; then
+		$DIALOG4 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL11 $LOCAL23 $LOCAL25\n\n$LOCAL10"
+		exit 0
+	else
 		$DIALOG4 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL9\n\n$LOCAL10"
 		exit 1
-	else
-		$DIALOG4 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL11 $OUTPUT $LOCAL12\n\n$LOCAL10"
-		exit 0
 	fi
 fi
 
@@ -160,6 +188,34 @@ exit 1
 
 }
 
+upmenu () {
+
+UPCHECK=`cat /etc/xdg/autostart/sparky-aptus-update.desktop | grep "#Exec"`
+if [ "$UPCHECK" = "" ]; then
+	$DIALOG4 $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL28"
+	if [ "$?" = "1" ]; then
+		exit 1
+	else
+		remsu sed -i -e 's/Exec/#Exec/g' /etc/xdg/autostart/sparky-aptus-update.desktop
+		$DIALOG4 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL29\n\n$LOCAL10"
+		exit 1
+	fi
+elif [ "$UPCHECK" != "" ]; then
+	$DIALOG4 $TITLE"$TITLETEXT" $OKEXIT $TEXT"$LOCAL30"
+	if [ "$?" = "1" ]; then
+		exit 1
+	else
+		remsu sed -i -e 's/#Exec/Exec/g' /etc/xdg/autostart/sparky-aptus-update.desktop
+		$DIALOG4 $TITLE"$TITLETEXT" $MSGBOX $TEXT"$LOCAL31\n\n$LOCAL10"
+		exit 1
+	fi
+fi
+
+exit 1
+
+}
+
 mainmenu
 addmenu
 remmenu
+upmenu
