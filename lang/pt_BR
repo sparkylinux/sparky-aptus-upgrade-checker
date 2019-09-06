@@ -3,7 +3,7 @@
 # Sob a licença GNU GPL v2
 # Traduzido por Elton Fabrício Ferreira "eltonfabricio10" <eltonfabricio10@gmail.com> 2018/02/17
 # Last update by pavroo 2019/09/03
-LOCAL0="Remover CRON Scheduler"
+LOCAL0="Remover Agendador CRON"
 LOCAL1="Novas atualizações estão disponíveis"
 LOCAL2="Deseja executar a Ferramenta de Atualização do Sistema?"
 LOCAL3="Sim"
