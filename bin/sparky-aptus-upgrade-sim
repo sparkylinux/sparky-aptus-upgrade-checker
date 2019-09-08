@@ -33,10 +33,7 @@ if [ "$1" = "simulate" ]; then
 	# do the job
 	apt-get update
 	apt-get -u dist-upgrade --assume-no >> /tmp/aptus-update/checkout
-	sed -i 1d /tmp/aptus-update/checkout
-	sed -i 1d /tmp/aptus-update/checkout
-	sed -i 1d /tmp/aptus-update/checkout
-	sed -i 1d /tmp/aptus-update/checkout
+	sed -i '1,4d' /tmp/aptus-update/checkout
 	sed -i '$ d' /tmp/aptus-update/checkout
 	sed -i '$ d' /tmp/aptus-update/checkout
 fi
