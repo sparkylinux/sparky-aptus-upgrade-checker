@@ -1,7 +1,7 @@
 # German localization file for Sparky APTus Upgrade Checker
 # Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
 # Under the GNU GPL v2
-# Last update by pavroo 2019/09/03
+# Last update by pavroo 2019/09/18
 # Translation by Stefan Wilhelm 2019/09/17
 LOCAL0="Entferne CRON Planer"
 LOCAL1="Updates sind verfügbar"
@@ -37,15 +37,3 @@ LOCAL31="Erledigt! Der Upgrade Checker wurde für den Systemstart aktiviert."
 ### .desktop file to be translated too
 # Name[de]=System Upgrade Planer
 # Comment[de]=System Upgrade Planer
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
