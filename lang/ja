@@ -1,0 +1,39 @@
+# Japanese localization file for Sparky APTus Upgrade Checker
+# Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
+# Under the GNU GPL v2
+# Last update by pavroo 2019/09/03
+# Translated to Japanese by FuRuYa7.
+LOCAL0="cron スケジューラを削除"
+LOCAL1="更新できます"
+LOCAL2="システムアップグレードツールを実行しますか？"
+LOCAL3="はい"
+LOCAL4="いいえ"
+LOCAL5="終了"
+LOCAL6="システムアップグレードスケジューラ"
+LOCAL7="更新をいつチェックするかを選択します"
+LOCAL8="毎（時間）:"
+LOCAL9="うまくいきませんでした！ 新しいSparky 更新cron は見つかりませんでした！"
+LOCAL10="終了しています..."
+LOCAL11="完了！ ツールは更新を毎回チェックします"
+LOCAL12="時間"
+LOCAL14="システムアップグレードスケジューラが存在する場合、削除しますか？"
+LOCAL15="うまくいきませんでした！ アップグレードcron はまだ存在します！"
+LOCAL16="完了！ アップグレードcron は削除されました！"
+LOCAL17="新しいシステムアップグレードスケジューラを追加しますか？"
+LOCAL18="時"
+LOCAL19="時間"
+LOCAL20="1日に1回"
+LOCAL21="1週間に1回"
+LOCAL22="日"
+LOCAL23="週間"
+LOCAL24="午前10時"
+LOCAL25="毎週月曜日の午前10時に"
+LOCAL26="起動時にアップグレードチェッカーを有効/無効にします"
+#LOCAL27=""
+LOCAL28="アップグレードチェッカーは、システムの起動時に更新をチェックします。無効にしますか？"
+LOCAL29="完了！ アップグレードチェッカーは、システムの起動時に無効になっています。"
+LOCAL30="アップグレードチェッカーは、システムの起動時に無効になります。 有効にしますか？"
+LOCAL31="完了！ アップグレードチェッカーは、システムの起動時に有効になっています。"
+### .desktop file to be translated too
+# Name[ja_JP]=システムアップグレードスケジューラ
+# Comment[ja_JP]=システムアップグレードスケジューラ
