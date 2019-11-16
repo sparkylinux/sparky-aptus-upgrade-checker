@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2019 under the GNU GPL2 License
-# Last update 2019/09/18
+# Last update 2019/11/16
 
 sleep 30
 
@@ -12,6 +12,8 @@ sleep 30
 DEFLOCDIR="/usr/share/sparky/sparky-aptus-upgrade-checker"
 if [ "`cat /etc/default/locale | grep de`" != "" ]; then
 . $DEFLOCDIR/de
+elif [ "`cat /etc/default/locale | grep el`" != "" ]; then
+. $DEFLOCDIR/el
 elif [ "`cat /etc/default/locale | grep es`" != "" ]; then
 . $DEFLOCDIR/es
 elif [ "`cat /etc/default/locale | grep fr`" != "" ]; then
@@ -22,6 +24,8 @@ elif [ "`cat /etc/default/locale | grep id_ID`" != "" ]; then
 . $DEFLOCDIR/id_ID
 elif [ "`cat /etc/default/locale | grep it`" != "" ]; then
 . $DEFLOCDIR/it
+elif [ "`cat /etc/default/locale | grep ja`" != "" ]; then
+. $DEFLOCDIR/ja
 elif [ "`cat /etc/default/locale | grep pl`" != "" ]; then
 . $DEFLOCDIR/pl
 elif [ "`cat /etc/default/locale | grep pt_BR`" != "" ]; then
