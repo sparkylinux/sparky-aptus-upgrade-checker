@@ -23,7 +23,7 @@ coreutils
 cron
 grep
 iputils-ping
-ktsuss | menu
+ktsuss | sparky-su | menu
 sed
 sparky-aptus-upgrade
 sparky-remsu (>= 0.2.10)

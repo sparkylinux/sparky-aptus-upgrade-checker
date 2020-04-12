@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2020 under the GNU GPL2 License
-# Last update 2020/04/12
+# Last update 2020/04/13
 
 sleep 30
 
@@ -64,16 +64,16 @@ fi
 UPGRADE1=$(cat /tmp/aptus-update/checkout | tail -n2 | grep [kM]B)
 
 KTSUSS=`which ktsuss`
-REMSU=`which remsu`
+SPSU=`which spsu`
 SUTOROOT=`which su-to-root`
 if [ "$KTSUSS" != "" ]; then
 	ROOTEXEC="ktsuss"
-elif [ "$REMSU" != "" ]; then
-	ROOTEXEC="remsu"
+elif [ "$SPSU" != "" ]; then
+	ROOTEXEC="spsu"
 elif [ "$SUTOROOT" != "" ]; then
 	ROOTEXEC="su-to-root -X -c"
 else
-	echo "no ktsuss, remsu nor su-to-root commands found... exiting.."
+	echo "no ktsuss, spsu nor su-to-root commands found... exiting.."
 	exit 1
 fi
 # display a message
