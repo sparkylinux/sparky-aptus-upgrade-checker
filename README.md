@@ -1,7 +1,7 @@
 System Upgrade Checker
 It updates package list, checks packages to be upgrade and displays notification on user's desktop.
 
-Copyright (C) 2017-2019 Paweł Pijanowski and others, see copyright file.
+Copyright (C) 2017-2020 Paweł Pijanowski and others, see copyright file.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
