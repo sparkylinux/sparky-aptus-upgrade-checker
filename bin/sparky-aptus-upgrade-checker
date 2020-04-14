@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2020 under the GNU GPL2 License
-# Last update 2020/04/14
+# Last update 2020/04/15
 
 sleep 30
 
@@ -83,7 +83,7 @@ if [ "$UPGRADE1" != "" ]; then
 
 	# run sparky-aptus-upgrade tool
 	if [ "$?" = "0" ]; then
-		PATH=$PATCH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+		PATH=$PATH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 		$ROOTEXEC /usr/bin/sparky-aptus-upgrade
 	fi
 fi
