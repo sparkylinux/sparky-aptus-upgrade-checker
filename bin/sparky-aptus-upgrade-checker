@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2020 under the GNU GPL2 License
-# Last update 2020/04/13
+# Last update 2020/04/14
 
 sleep 30
 
@@ -66,8 +66,9 @@ UPGRADE1=$(cat /tmp/aptus-update/checkout | tail -n2 | grep [kM]B)
 KTSUSS=`which ktsuss`
 SPSU=`which spsu`
 SUTOROOT=`which su-to-root`
+
 if [ "$KTSUSS" != "" ]; then
-	ROOTEXEC="ktsuss"
+	ROOTEXEC="sudo ktsuss"
 elif [ "$SPSU" != "" ]; then
 	ROOTEXEC="spsu"
 elif [ "$SUTOROOT" != "" ]; then
@@ -82,7 +83,7 @@ if [ "$UPGRADE1" != "" ]; then
 
 	# run sparky-aptus-upgrade tool
 	if [ "$?" = "0" ]; then
-		PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+		PATH=$PATCH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 		$ROOTEXEC /usr/bin/sparky-aptus-upgrade
 	fi
 fi
