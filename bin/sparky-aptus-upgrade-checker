@@ -67,10 +67,10 @@ KTSUSS=`which ktsuss`
 SPSU=`which spsu`
 SUTOROOT=`which su-to-root`
 
-if [ "$KTSUSS" != "" ]; then
-	ROOTEXEC="sudo ktsuss"
-elif [ "$SPSU" != "" ]; then
+if [ "$SPSU" != "" ]; then
 	ROOTEXEC="spsu"
+elif [ "$KTSUSS" != "" ]; then
+	ROOTEXEC="ktsuss"
 elif [ "$SUTOROOT" != "" ]; then
 	ROOTEXEC="su-to-root -X -c"
 else
