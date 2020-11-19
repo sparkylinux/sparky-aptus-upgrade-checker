@@ -55,8 +55,8 @@ Exit "$LOCAL5" \
 1h "1 $LOCAL18" \
 2h "2 $LOCAL19" \
 4h "4 $LOCAL19" \
-8h "8 $LOCAL12" \
-12h "12 $LOCAL12" \
+8h "8 $LOCAL13" \
+12h "12 $LOCAL13" \
 24h "$LOCAL20" \
 7d "$LOCAL21" \
 DEL "$LOCAL0" \

@@ -16,6 +16,7 @@ LOCAL9="Algo deu errado! Nenhum novo agendamento de atualização do Sparky enco
 LOCAL10="Saindo..."
 LOCAL11="Feito! A ferramenta verificará atualizações a cada"
 LOCAL12="horas"
+LOCAL13="horas"
 LOCAL14="Você gostaria de remover o agendamento de atualização do sistema, se existir?"
 LOCAL15="Algo deu errado! O agendamento de atualização ainda existe!"
 LOCAL16="Feito! O agendamento de atualização foi removido!"

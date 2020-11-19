@@ -15,6 +15,7 @@ LOCAL9="Valami hiba történt! Nem talált új Sparky frissítés ütemezőt (cr
 LOCAL10="Kilépés..."
 LOCAL11="Kész! Az eszköz ellenőrizni fog minden"
 LOCAL12="órában"
+LOCAL13="órák"
 LOCAL14="Kívánja - ha létezik -eltávolítani a Rendszer Frissítő/korszerűsítő Ütemezőt (System Upgrade Scheduler)?"
 LOCAL15="Valami hiba történt! A frissítés ütemező (cron) létezik!"
 LOCAL16="Kész! A frissítés ütemező (cron) eltávolítva!"

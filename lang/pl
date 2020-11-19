@@ -15,6 +15,7 @@ LOCAL9="Coś poszło źle! Nie można znaleźć nowego crona aktualizacji Sparky
 LOCAL10="Wyjście..."
 LOCAL11="Zrobione! Program będzie sprawdzał aktualizacje co"
 LOCAL12="godzin"
+LOCAL13="godzin"
 LOCAL14="Czy chcesz usunąć Harmonogram Aktualizacji Systemu, jeśli istnieje?"
 LOCAL15="Coś poszło źle! Cron aktualizacji wciąż istnieje!"
 LOCAL16="Zrobione! Cron aktualizacji został usunięty!"
