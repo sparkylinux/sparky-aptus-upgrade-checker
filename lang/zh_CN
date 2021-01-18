@@ -1,7 +1,7 @@
 # Chinese(Simplified) localization file for Sparky APTus Upgrade Checker
 # Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
 # Under the GNU GPL v2
-# Last update by xingjiapeng 2020/11/13
+# Last update by xingjiapeng 2021/01/18
 LOCAL0="移除 CRON 时间表"
 LOCAL1="现在可以更新"
 LOCAL2="运行系统更新工具？"
@@ -13,11 +13,11 @@ LOCAL7="选择我何时需要检查更新"
 LOCAL8="每（小时）："
 LOCAL9="出错了！没有找到新的 Sparky 更新 cron 服务！"
 LOCAL10="退出……"
-LOCAL11="完成！此工具将每"
-LOCAL12="小时检查一次更新"
-LOCAL14="如果存在的话，您是否想要移除系统更新时间表？"
-LOCAL15="出错了！更新时间表仍存在！"
-LOCAL16="完成！更新时间表已经移除！"
+LOCAL11="完成！此工具检查时间将确定为："
+LOCAL12="小时"
+LOCAL14="如果存在的话，您是否想要移除原系统更新时间表？"
+LOCAL15="出错了！原更新时间表仍存在！"
+LOCAL16="完成！原更新时间表已经移除！"
 LOCAL17="您是否想要添加新的系统更新时间表？"
 LOCAL18="小时"
 LOCAL19="小时"
