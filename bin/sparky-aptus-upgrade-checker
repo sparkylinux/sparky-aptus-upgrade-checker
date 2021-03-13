@@ -3,8 +3,8 @@
 # Sparky APTus Update updates package list and displays
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
-# Copyright 2017-2020 under the GNU GPL2 License
-# Last update 2020/10/06
+# Copyright 2017-2021 under the GNU GPL2 License
+# Last update 2021/03/13
 
 sleep 30
 
@@ -45,7 +45,8 @@ TEXT="--text="
 OKEXIT=" --button=$LOCAL3:0 --button=$LOCAL4:1 "
 
 # do not run it on live system
-TESTMODE=`grep "live" /etc/passwd`
+#TESTMODE=`grep "live" /etc/passwd`
+TESTMODE=`mount | grep squashfs`
 if [ "$TESTMODE" != "" ]; then
 	exit 1
 fi
