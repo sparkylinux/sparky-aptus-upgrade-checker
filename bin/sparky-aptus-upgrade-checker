@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2021 under the GNU GPL2 License
-# Last update 2021/03/13
+# Last update 2021/03/15
 
 sleep 30
 
@@ -47,12 +47,14 @@ OKEXIT=" --button=$LOCAL3:0 --button=$LOCAL4:1 "
 # do not run it on live system
 #TESTMODE=`grep "live" /etc/passwd`
 TESTMODE=`mount | grep squashfs`
-if [ "$TESTMODE" != "" ]; then
+if [ "$TESTMODE" != "" ] && [ -d /home/live ]; then
+	echo "it's live system... exiting..."
 	exit 1
 fi
 
 # do not run it if sparky-firstrun is installed
 if [ -f /usr/bin/sparky-firstrun ]; then
+	echo "sparky-firstrun is installed... exiting"
 	exit 1
 fi
 
@@ -61,6 +63,7 @@ sudo /usr/bin/sparky-aptus-upgrade-sim simulate
 # check out connection
 CHECKPING=`cat /tmp/sparky-ping | grep failed`
 if [ "$CHECKPING" != "" ]; then
+	echo "ping failed... exiting..."
 	exit 1
 fi
 
