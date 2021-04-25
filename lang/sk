@@ -1,0 +1,38 @@
+# Slovak localization file for Sparky APTus Upgrade Checker
+# Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
+# Under the GNU GPL v2
+# Last update by pavroo 2019/09/03
+LOCAL0="Odstrániť CRON úlohu"
+LOCAL1="Sú dostupné aktualizácie"
+LOCAL2="Spustiť nástroj na aktualizáciu systému?"
+LOCAL3="Áno"
+LOCAL4="Nie"
+LOCAL5="Ukončiť"
+LOCAL6="Plán aktualizácií systému"
+LOCAL7="Vyberte, kedy mám zisťovať aktualizácie"
+LOCAL8="Každých (v hodinách):"
+LOCAL9="Niečo sa pokazilo! Nepodarilo sa nájsť novú CRON úlohu pre aktualizáciu Sparky!"
+LOCAL10="Končím..."
+LOCAL11="Hotovo! Nástroj bude zisťovať aktualizácie každé/ých"
+LOCAL12="hodiny/ín"
+LOCAL14="Želáte si odstrániť plán aktualizácií systému, ak existuje?"
+LOCAL15="Niečo sa pokazilo! CRON úlohu na aktualizáciu sa nepodarilo odstrániť!"
+LOCAL16="Hotovo! CRON úloha na aktualizáciu bola odstránená!"
+LOCAL17="Želáte si pridať nový plán aktualizácií systému?"
+LOCAL18="hodina"
+LOCAL19="hodiny/ín"
+LOCAL20="Raz denne"
+LOCAL21="Raz týždenne"
+LOCAL22="deň"
+LOCAL23="týždeň"
+LOCAL24="o 10 am"
+LOCAL25="o 10 am každý pondelok"
+LOCAL26="Povoliť/zakázať zisťovanie aktualizácií pri štarte systému"
+#LOCAL27=""
+LOCAL28="Zisťovač aktualizácií vyhľadáva aktualizácie pri štarte systému. Želáte si ho vypnúť?"
+LOCAL29="Hotovo! Zisťovač aktualizácií sa už nebude spúšťať pri štarte systému."
+LOCAL30="Zisťovač aktualizácií sa momentálne nespúšťa pri štarte systému. Želáte si ho zapnúť?"
+LOCAL31="Hotovo! Zisťovač aktualizácií sa odteraz bude spúšťať pri štarte systému."
+### .desktop file to be translated too
+# Name[sk]=Plán aktualizácií systému
+# Comment[sk]=Plán aktualizácií systému
