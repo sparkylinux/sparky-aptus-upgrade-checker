@@ -1,0 +1,39 @@
+# Spanish (es_ES) localization file for Sparky APTus Upgrade Checker
+# Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
+# Under the GNU GPL v2
+# Last update by pavroo 2019/09/03
+# Translated by depaz
+LOCAL0="Quitar la tarea Cron del planificador"
+LOCAL1="Hay actualizaciones disponibles"
+LOCAL2="¿Ejecutar la herramienta de actualización del sistema?"
+LOCAL3="Sí"
+LOCAL4="No"
+LOCAL5="Salir"
+LOCAL6="Planificador de actualizaciones del sistema"
+LOCAL7="Escoja cuándo se debe comprobar si hay actualizaciones."
+LOCAL8="Cada (en horas):"
+LOCAL9="¡Algo fue mal! ¡No se pudo encontrar la nueva tarea Cron para actualizaciones de Sparky!"
+LOCAL10="Saliendo..."
+LOCAL11="¡Hecho! La herramienta comprobará actualizaciones cada"
+LOCAL12="horas."
+LOCAL14="¿Le gustaría eliminar la planificación de actualizaciones del sistema, en caso de existir?"
+LOCAL15="¡Algo fue mal! ¡La tarea Cron para actualizaciones aún existe!"
+LOCAL16="¡Hecho! ¡La tarea Cron para actualizaciones ha sido eliminada!"
+LOCAL17="¿Le gustaría añadir la planificación de actualizaciones del sistema?"
+LOCAL18="hora"
+LOCAL19="horas"
+LOCAL20="Una vez al día"
+LOCAL21="Una vez a la semana"
+LOCAL22="día"
+LOCAL23="semana"
+LOCAL24="a las 10 AM"
+LOCAL25="a las 10 AM todos los lunes"
+LOCAL26="Activar/Desactivar el comprobador de actualizaciones al iniciar el sistema"
+#LOCAL27=""
+LOCAL28="El comprobador de actualizaciones comprueba actualizaciones al iniciar el sistema. ¿Desea desactivarlo?"
+LOCAL29="¡Hecho! El comprobador de actualizaciones ha sido desactivado del inicio del sistema."
+LOCAL30="El comprobador de actualizaciones está desactivado del inicio del sistema. ¿Desea reactivarlo?"
+LOCAL31="¡Hecho! El comprobador de actualizaciones ha sido activado al inicio del sistema."
+### .desktop file to be translated too
+# Name[es_ES]=Planificador de actualizaciones del sistema
+# Comment[es_ES]=Planificador de actualizaciones del sistema
