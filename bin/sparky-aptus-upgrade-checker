@@ -3,8 +3,8 @@
 # Sparky APTus Update updates package list and displays
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
-# Copyright 2017-2022 under the GNU GPL2 License
-# Last update 2022/07/11
+# Copyright 2017-2023 under the GNU GPL2 License
+# Last update 2023/02/13
 
 sleep 30
 
@@ -40,6 +40,8 @@ elif [ "`cat /etc/default/locale | grep LANG= | grep ru`" != "" ]; then
 . $DEFLOCDIR/ru
 elif [ "`cat /etc/default/locale | grep LANG= | grep sk`" != "" ]; then
 . $DEFLOCDIR/sk
+elif [ "`cat /etc/default/locale | grep LANG= | grep uk`" != "" ]; then
+. $DEFLOCDIR/uk
 elif [ "`cat /etc/default/locale | grep LANG= | grep zh_CN`" != "" ]; then
 . $DEFLOCDIR/zh_CN
 else
