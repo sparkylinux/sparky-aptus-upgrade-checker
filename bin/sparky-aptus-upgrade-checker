@@ -4,7 +4,7 @@
 # information that some updates are available
 # Created by Paweł "pavroo" Pijanowski 2017/06/15
 # Copyright 2017-2023 under the GNU GPL2 License
-# Last update 2023/04/28
+# Last update 2023/02/13
 
 sleep 30
 
@@ -77,21 +77,18 @@ fi
 
 UPGRADE1=$(cat /tmp/aptus-update/checkout | tail -n2 | grep [kM]B)
 
-REMSU=`which remsu`
 KTSUSS=`which ktsuss`
-#SPSU=`which spsu`
+SPSU=`which spsu`
 SUTOROOT=`which su-to-root`
 
-#elif [ "$SPSU" != "" ]; then
-#	ROOTEXEC="spsu"
-if [ "$KTSUSS" != "" ]; then
+if [ "$SPSU" != "" ]; then
+	ROOTEXEC="spsu"
+elif [ "$KTSUSS" != "" ]; then
 	ROOTEXEC="ktsuss"
-elif [ "$REMSU" != "" ]; then
-	ROOTEXEC="remsu"
 elif [ "$SUTOROOT" != "" ]; then
 	ROOTEXEC="su-to-root -X -c"
 else
-	echo "no remsu, ktsuss and su-to-root commands found... exiting.."
+	echo "no ktsuss, spsu nor su-to-root commands found... exiting.."
 	exit 1
 fi
 # display a message
@@ -100,12 +97,8 @@ if [ "$UPGRADE1" != "" ]; then
 
 	# run sparky-aptus-upgrade tool
 	if [ "$?" = "0" ]; then
-		if [ "$REMSU" != "" ]; then
-			$ROOTEXEC /usr/bin/sparky-aptus-upgrade
-		else
-			PATH=$PATH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-			$ROOTEXEC /usr/bin/sparky-aptus-upgrade
-		fi
+		PATH=$PATH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+		$ROOTEXEC /usr/bin/sparky-aptus-upgrade
 	fi
 fi
 

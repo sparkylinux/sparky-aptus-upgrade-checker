@@ -23,11 +23,11 @@ coreutils
 cron
 grep
 iputils-ping
-ktsuss | menu
+ktsuss | sparky-su | menu
 mount
 sed
 sparky-aptus-upgrade
-sparky-remsu (>= 0.2.18)
+sparky-remsu (>= 0.2.10)
 sudo
 yad
 
