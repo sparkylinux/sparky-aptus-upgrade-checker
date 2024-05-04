@@ -1,39 +1,39 @@
-# Spanish localization file for Sparky APTus Upgrade Checker
+# Argentinian Spanish (es_AR) localization file for Sparky APTus Upgrade Checker
 # Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
 # Under the GNU GPL v2
-# Translated by seacat 2017/11/03
-# Last update by pavroo 2019/09/03
-LOCAL0="Remove CRON Scheduler"
+# Originally translated by depaz. Last update by aleximon 2024/04/15
+
+LOCAL0="Eliminar el Planificador CRON"
 LOCAL1="Hay actualizaciones disponibles"
-LOCAL2="¿Ejecutar la herramienta de Actualización del Sistema?"
-LOCAL3="Si"
+LOCAL2="¿Ejecutar la herramienta de actualización del sistema?"
+LOCAL3="Sí"
 LOCAL4="No"
-LOCAL5="Exit"
-LOCAL6="System Upgrade Scheduler"
-LOCAL7="Choose when should I check updates"
-LOCAL8="Every (in hours):"
-LOCAL9="Something went wrong! No new Sparky update cron found!"
-LOCAL10="Exiting..."
-LOCAL11="Done! The tool will be checked updates every"
-LOCAL12="hours"
-LOCAL14="Would you like to remove System Upgrade Scheduler, if exist?"
-LOCAL15="Something went wrong! The upgrade cron still exist!"
-LOCAL16="Done! The upgrade cron has been removed!"
-LOCAL17="Would you like to add new System Upgrade Scheduler?"
-LOCAL18="hour"
-LOCAL19="hours"
-LOCAL20="Once per day"
-LOCAL21="Once per week"
-LOCAL22="day"
-LOCAL23="week"
-LOCAL24="at 10 am"
-LOCAL25="at 10 am every Monday"
-LOCAL26="Enable/Disable Upgrade Checker at startup"
+LOCAL5="Salir"
+LOCAL6="Planificador de actualizaciones del sistema"
+LOCAL7="Elija la frecuencia para comprobar si hay actualizaciones."
+LOCAL8="Se comprobará cada:"
+LOCAL9="¡Algo falló! ¡No se pudo encontrar un Plan de actualizaciones de Sparky!"
+LOCAL10="Saliendo..."
+LOCAL11="¡Listo! La herramienta comprobará actualizaciones cada"
+LOCAL12="horas."
+LOCAL14="¿Desea eliminar el Plan de actualizaciones del sistema, en caso de que exista?"
+LOCAL15="¡Algo falló! ¡El Plan de Actualizaciones CRON aún existe!"
+LOCAL16="¡Listo! ¡El Plan de Actualizaciones ha sido eliminado!"
+LOCAL17="¿Desea añadir el nuevo Plan de Actualizaciones del Sistema?"
+LOCAL18="hora"
+LOCAL19="horas"
+LOCAL20="Diariamente"
+LOCAL21="Una vez a la semana"
+LOCAL22="día"
+LOCAL23="semana"
+LOCAL24="a las 10 AM"
+LOCAL25="a las 10 AM de cada lunes"
+LOCAL26="Activar/Desactivar la comprobación de actualizaciones en el inicio del sistema"
 #LOCAL27=""
-LOCAL28="The Upgrade Checker checks updates at system startup. Would you like to disable it?"
-LOCAL29="Done! The Upgrade Checker has been disabled at the system startup."
-LOCAL30="The Upgrade Checker is disabled at the system startup. Would you like to enable it?"
-LOCAL31="Done! The Upgrade Checker has been enabled at the system startup."
+LOCAL28="Está habilitada la comprobación de actualizaciones en el inicio del sistema. ¿Desea desactivarla?"
+LOCAL29="¡Listo! Se desactivó la comprobación de actualizaciones al iniciar el sistema."
+LOCAL30="Está desactivada la comprobación de actualizaciones en el inicio del sistema. ¿Desea activarla?"
+LOCAL31="¡Listo! Se activó la comprobación de actualizaciones al iniciar el sistema."
 ### .desktop file to be translated too
-# Name[es]=System Upgrade Scheduler
-# Comment[es]=System upgrade scheduler
+# Name[es_ES]=Planificador de Actualizaciones
+# Comment[es_ES]=Planificador de Actualizaciones del Sistema
