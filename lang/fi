@@ -1,0 +1,38 @@
+# Suomenkielinen lokalisointitiedosto Sparky APTus Upgrade Checkerille
+# Tekijänoikeus PaweÅ‚ "pavroo" Pijanowski <pavroo@onet.eu> 18.6.2017
+# GNU GPL v2:n alla
+# Viimeisin päivitys: pavroo 2019/09/03
+LOCAL0="Poista CRON-aikataulu"
+LOCAL1="Päivitykset ovat saatavilla"
+LOCAL2="Käynnistä järjestelmän päivitystyökalu?"
+LOCAL3="Kyllä"
+LOCAL4="Ei"
+LOCAL5="Poistu"
+LOCAL6="Järjestelmän päivitysaikataulu"
+LOCAL7="Valitse milloin minun tulee tarkistaa päivitykset"
+LOCAL8="Joka (tunteina):"
+LOCAL9="Jotain meni pieleen! Uutta Sparky-päivityscronia ei löytynyt!"
+LOCAL10="Poistutaan..."
+LOCAL11="Valmis! Työkalun päivitykset tarkistetaan joka kerta"
+LOCAL12="tunnit"
+LOCAL14="Haluatko poistaa System Upgrade Schedulerin, jos sellainen on?"
+LOCAL15="Jotain meni pieleen! Päivitysversio on edelleen olemassa!"
+LOCAL16="Valmis! Päivityscron on poistettu!"
+LOCAL17="Haluatko lisätä uuden System Upgrade Schedulerin?"
+LOCAL18="tunti"
+LOCAL19="tunnit"
+LOCAL20="Kerran päivässä"
+LOCAL21="Kerran viikossa"
+LOCAL22="päivä"
+LOCAL23="viikko"
+LOCAL24="kello 10"
+LOCAL25="kello 10 joka maanantai"
+LOCAL26="Ota päivitystarkistus käyttöön/poista käytöstä käynnistettäessä"
+#LOCAL27=""
+LOCAL28="Päivitystarkistus tarkistaa päivitykset järjestelmän käynnistyksen yhteydessä. Haluatko poistaa sen käytöstä?"
+LOCAL29="Valmis! Päivitystarkistus on poistettu käytöstä järjestelmän käynnistyksen yhteydessä."
+LOCAL30="Päivitystarkistus on poistettu käytöstä järjestelmän käynnistyksen yhteydessä. Haluatko ottaa sen käyttöön?"
+LOCAL31="Valmis! Päivitystarkistus on otettu käyttöön järjestelmän käynnistyksen yhteydessä."
+### .desktop-tiedosto käännettävä myös
+# Name[fi]=Järjestelmän päivitysaikataulu
+# Comment[fi]=Järjestelmän päivityksen ajoitus
