@@ -2,7 +2,7 @@
 # Copyright Paweł "pavroo" Pijanowski <pavroo@onet.eu> 2017/06/18
 # Under the GNU GPL v2
 # Last update by pavroo 2019/09/18
-# Translation by Stefan Wilhelm 2019/09/17 (aktualisiert 31.05.2025)
+# Translation by Stefan Wilhelm 2019/09/17 (aktualisiert 06.06.2025)
 LOCAL0="CRON-Scheduler entfernen"
 LOCAL1="Aktualisierungen sind verfügbar"
 LOCAL2="System-Upgrade-Tool ausführen?"
@@ -15,7 +15,7 @@ LOCAL8="Jede/Alle (in Stunden):"
 LOCAL9="Irgendetwas ist schief gelaufen! Kein neuer Sparky-Update-Cron gefunden!"
 LOCAL10="Wird beendet ..."
 LOCAL11="Erledigt! Das Tool wird nach Aktualisierungen suchen jede/alle"
-LOCAL12="Stunde(n)"
+LOCAL12="Stunden"
 LOCAL14="Möchten Sie den System-Upgrade-Scheduler entfernen, falls vorhanden?"
 LOCAL15="Irgendetwas ist schief gelaufen! Der Upgrade-Cron exisitiert noch immer!"
 LOCAL16="Erledigt! Der Upgrade-Cron ist entfernt worden!"
@@ -35,5 +35,5 @@ LOCAL29="Erledigt! Der Upgrade-Checker ist beim Systemstart deaktiviert worden."
 LOCAL30="Der Upgrade-Checker ist beim Systemstart deaktiviert. Möchten Sie ihn aktivieren?"
 LOCAL31="Erledigt! Der Upgrade-Checker ist beim Systemstart aktiviert worden."
 ### .desktop file to be translated too
-# Name[de]=System Upgrade Planer
-# Comment[de]=System Upgrade Planer
+# Name[de]=System-Upgrade-Scheduler
+# Comment[de]=System-Upgrade-Planer
